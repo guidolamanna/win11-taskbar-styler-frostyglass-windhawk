@@ -49,7 +49,7 @@ Paste this into the **Advanced** tab of the **Taskbar Auto-Hide Instant Show** m
 ## 📦 Installation
 1.  **Mod Selection:** Open **Windows 11 Taskbar Styler** in Windhawk and select the **DockLike** theme.
 2.  **Download Config:** Copy the raw code from [`taskbar-config.json`](./taskbar-config.json).
-3.  **Advanced Tab:** Paste the code into the configuration box in the **Advanced** tab.
+3.  **Advanced Tab:** Go to the Advanced tab of the mod settings, delete all text in the text box, and paste the copied code.
 4.  **Save:** Click **Save** to apply the translucent effects instantly.
 
 ---
