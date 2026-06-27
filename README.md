@@ -46,15 +46,15 @@ Paste this into the **Advanced** tab of the **Taskbar Auto-Hide Instant Show** m
 ---
 
 ## 📦 Installation
-1.  **Mod Selection:** Open **Windows 11 Taskbar Styler** in Windhawk and select the **DockLike** theme.
+1.  **Open Mod:** Open **Windows 11 Taskbar Styler** in Windhawk.
 2.  **Download Config:** Copy the raw code from [`taskbar-config.json`](./taskbar-config.json).
-3.  **Advanced Tab:** Go to the Advanced tab of the mod settings, delete all text in the text box, and paste the copied code.
-4.  **Save:** Click **Save** to apply the translucent effects instantly.
+3.  **Advanced Tab:** Go to the **Advanced** tab of the mod settings, clear the existing text in the text box, and paste the code you just copied.
+4.  **Save:** Click **Save** to apply the Frosty Glass aesthetic instantly.
 
 ---
 
 ## 📸 Showcase
-*Here is the Frosty Glass taskbar in action:*
+*Here is the Frosty Glass dock taskbar in action:*
 
 **Video Demonstration:**
 
