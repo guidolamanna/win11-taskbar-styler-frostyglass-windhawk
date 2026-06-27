@@ -2,16 +2,15 @@
 > A refined, translucent "Dock" experience for Windows 11 via Windhawk.
 
 [![Windhawk](https://img.shields.io/badge/Requires-Windhawk-blue?style=flat-square)](https://windhawk.net/)
-[![Theme](https://img.shields.io/badge/Base_Theme-DockLike-9cf?style=flat-square)](#)
 [![Style](https://img.shields.io/badge/Style-Frosty_Glass-lightgrey?style=flat-square)](#)
 
-This configuration is built upon the **DockLike** theme and features a modern **Frosty Glass** aesthetic. It utilizes custom translucent `AcrylicBrush` effects to create a soft, blurred interface that feels integrated with the desktop environment.
+This configuration provides a modern **Frosty Glass** aesthetic for your Windows 11 taskbar. It utilizes custom translucent `AcrylicBrush` effects and manual layout adjustments to create a soft, blurred interface that feels perfectly integrated with the desktop environment.
 
 ---
 
 ## ✨ Design Philosophy
 This theme focuses on a clean, premium look through:
-* **DockLike Foundation:** Uses the DockLike theme as a base for the centered, detached taskbar structure.
+* **Manual Dock Construction:** A custom-built configuration that transforms the standard taskbar into a centered, detached "dock" layout, engineered entirely from scratch.
 * **Translucent Effects:** Soft blurring via Acrylic effects for a modern, high-end feel.
 * **The "Floating" Layout:** Detached from screen edges with a centered, rounded appearance.
 * **Comprehensive Styling:** By handling all `explorer.exe` threads, this config extends the seamless "Frosty Glass" look far beyond the taskbar. It styles the volume and brightness popups, Alt+Tab and Win+Tab menus, the language popup, snap layout flyouts, and all app/system tray tooltips.
