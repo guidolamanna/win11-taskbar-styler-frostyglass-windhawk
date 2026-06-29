@@ -69,7 +69,7 @@ The theme styles can be imported manually by following these steps:
 <details>
 <summary>Content to import (click to expand)</summary>
 
-```text
+```yaml
 theme: ''
 styleConstants:
   - Background=<AcrylicBrush TintColor="#10000020"/>
