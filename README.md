@@ -388,7 +388,9 @@ resourceVariables:
   - variableKey: ''
     value: ''
 
-``````
+```
+</details>
+
 ---
 
 ## 📸 Showcase
