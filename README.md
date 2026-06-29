@@ -12,6 +12,12 @@ This configuration provides a modern **Frosty Glass** aesthetic for your Windows
 
 1. Download and install [Windhawk](https://windhawk.net/).
 2. Inside Windhawk, search for and install the **Windows 11 Taskbar Styler** mod by Ramen Software.
+3. For the complete aesthetic and functionality shown in this repository, search for and install the following additional Windhawk mods:
+   * **Taskbar tray system icon tweaks**
+   * **Taskbar tray auto-hide (show on hover)**
+   * **Taskbar height and icon size**
+   * **Taskbar auto-hide when maximized**
+   * **Taskbar Auto-Hide Instant Show**
    
 ---
 
