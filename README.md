@@ -6,6 +6,11 @@
 
 This configuration provides a modern **Frosty Glass** aesthetic for your Windows 11 taskbar. It utilizes custom translucent `AcrylicBrush` effects and manual layout adjustments to create a soft, blurred interface that feels perfectly integrated with the desktop environment.
 
+## 📋 Prerequisites
+
+1. Download and install [Windhawk](https://windhawk.net/).
+2. Inside Windhawk, search for and install the **Windows 11 Taskbar Styler** mod by Ramen Software.
+   
 ---
 
 ## ✨ Design Philosophy
