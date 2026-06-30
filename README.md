@@ -21,13 +21,13 @@ This configuration provides a modern **Frosty Glass** aesthetic for your Windows
    
 ---
 
-## ✨ Design Philosophy
-This theme focuses on a clean, premium look through:
-* **Manual Dock Construction:** A custom-built configuration that transforms the standard taskbar into a centered, detached "dock" layout, engineered based on the DockLike theme.
-* **Translucent Effects:** Soft blurring via Acrylic effects for a modern, high-end feel.
-* **The "Floating" Layout:** Detached from screen edges with a centered, rounded appearance.
-* **Comprehensive Styling:** By handling all `explorer.exe` threads, this config extends the seamless "Frosty Glass" look far beyond the taskbar. It styles the volume and brightness popups, Alt+Tab and Win+Tab menus, the language popup, snap layout flyouts, and all app/system tray tooltips.
-* **Minimalist UI:** Removing unnecessary clutter to focus on pure aesthetics.
+## 🎨 Design Philosophy & Recommendations
+This theme is crafted for a pure, minimal "Dock" aesthetic. To maintain the visual integrity and prevent layout breakage, please follow these recommendations:
+
+* **Centralized Taskbar:** This theme is engineered specifically for a centered taskbar layout. Left-aligned taskbars are not supported and will break the aesthetic.
+* **Minimalist Tray:** For the best results, keep the taskbar free of clutter. 
+    * **Search:** If you must use Search, enable only the **Search box** (`Settings > Personalization > Taskbar > Taskbar items > Search > Search box`). Other search modes may cause UI inconsistencies.
+    * **Widgets & Task View:** It is recommended to disable **Widgets** to maintain a clean layout. The **Task view** button is fully supported and works perfectly within this design.
 
 ## 📐 Screen Compatibility & Reference Setup
 This configuration will work on **any device or resolution**. However, depending on your physical screen size and scaling, you may want to tweak certain values (like taskbar height or icon sizes) in the mods to perfectly align with your display.
@@ -45,7 +45,7 @@ For the complete minimal and smooth "Frosty Glass" experience, I use the followi
 | :--- | :--- |
 | **Taskbar tray system icon tweaks** | `Hide location icon` \| `Hide bell icon` \| `Show desktop width: 12` |
 | **Taskbar tray auto-hide (show on hover)** | `Hidden opacity: 0` \| `Hide delay: 0` \| `Fade duration: 100` |
-| **Taskbar height and icon size** | `Height: 54` \| `Icon Size: 31` \| `Button Width: 44` \| `Small Icon Size: 31` \| `Small Button Width: 44` |
+| **Taskbar height and icon size** | `Height: 54` \| `Icon Size: 30` \| `Button Width: 45` \| `Small Icon Size: 30` \| `Small Button Width: 45` |
 | **Taskbar auto-hide when maximized** | `Mode: Auto-hide when maximized or intersects taskbar` |
 | **Taskbar Auto-Hide Instant Show** | *See configuration below* |
 
@@ -73,15 +73,15 @@ The theme styles can be imported manually by following these steps:
 theme: ''
 styleConstants:
   - Background=<AcrylicBrush TintColor="#10000020"/>
-  - BorderBrush2=<LinearGradientBrush EndPoint="0,1" StartPoint="0,0"><GradientStop Color="{ThemeResource SystemChromeHighColor}" Offset="0.0"/><GradientStop Color="{ThemeResource SystemChromeLowColor}" Offset="0.25"/><GradientStop Color="{ThemeResource SystemChromeHighColor}" Offset="1"/></LinearGradientBrush>
+  - BorderBrush2=<LinearGradientBrush StartPoint="0,0" EndPoint="0,1"><GradientStop Color="{ThemeResource SystemChromeHighColor}" Offset="0.0" /><GradientStop Color="{ThemeResource SystemChromeLowColor}" Offset="0.25" /><GradientStop Color="{ThemeResource SystemChromeHighColor}" Offset="1" /></LinearGradientBrush>
   - BorderThickness=1
   - CornerRadius=10
-  - BorderBrush=<LinearGradientBrush EndPoint="0,1" StartPoint="0,0"><GradientStop Color="#50808080" Offset="0.0"/><GradientStop Color="#50404040" Offset="0.25"/><GradientStop Color="#50808080" Offset="1"/></LinearGradientBrush>
-  - Background2=<AcrylicBrush FallbackColor="{ThemeResource SystemChromeAltHighColor}" TintColor="{ThemeResource SystemChromeAltHighColor}" TintOpacity="0.3"/>
+  - BorderBrush=<LinearGradientBrush StartPoint="0,0" EndPoint="0,1"><GradientStop Color="#50808080" Offset="0.0" /><GradientStop Color="#50404040" Offset="0.25" /><GradientStop Color="#50808080" Offset="1" /></LinearGradientBrush>
+  - Background2=<AcrylicBrush TintColor="{ThemeResource SystemChromeAltHighColor}" TintOpacity="0.3" FallbackColor="{ThemeResource SystemChromeAltHighColor}" />
   - TrayPadding=4.5,4,4.5,4
-  - ElementBG=<SolidColorBrush Color="{ThemeResource SystemChromeAltHighColor}" Opacity="0.3"/>
+  - ElementBG=<SolidColorBrush Color="{ThemeResource SystemChromeAltHighColor}" Opacity="0.3" />
   - ElementBorderThickness=1
-  - ElementBorderBrush=<LinearGradientBrush EndPoint="0,1" StartPoint="0,0"><GradientStop Color="#50808080" Offset="1"/><GradientStop Color="#50606060" Offset="0.15"/></LinearGradientBrush>
+  - ElementBorderBrush=<LinearGradientBrush StartPoint="0,0" EndPoint="0,1"><GradientStop Color="#50808080" Offset="1" /><GradientStop Color="#50606060" Offset="0.15" /></LinearGradientBrush>
   - ElementCornerRadius=10
   - Background3=Transparent
   - BorderBrush3=Transparent
@@ -126,8 +126,9 @@ controlStyles:
       - CornerRadius=7
   - target: SystemTray.OmniButton#NotificationCenterButton > Grid > ContentPresenter > ItemsPresenter > StackPanel > ContentPresenter > systemtray:IconView#SystemTrayIcon > Grid
     styles:
-      - Padding=$TrayPadding
+      - Padding=2,2,5,4
       - CornerRadius=7
+      - HorizontalAlignment=Center
   - target: SystemTray.IconView#SystemTrayIcon > Grid#ContainerGrid > ContentPresenter#ContentPresenter > Grid#ContentGrid > SystemTray.TextIconContent > Grid#ContainerGrid
     styles:
       - Padding=$TrayPadding
@@ -155,19 +156,19 @@ controlStyles:
   - target: TextBlock#TimeInnerTextBlock
     styles:
       - FontSize=13
-      - FontFamily=vivo Sans EN VF
+      - FontFamily=Segoe UI VF
       - Margin=0
       - Padding=0
-      - RenderTransform:=<TranslateTransform X="4" Y="2"/>
+      - RenderTransform:=<TranslateTransform X="4" Y="2" />
       - Width=Auto
       - MinWidth=Auto
       - HorizontalAlignment=Left
   - target: TextBlock#DateInnerTextBlock
     styles:
-      - Visibility=Collapsed
-      - RenderTransform:=<TranslateTransform X="0" Y="-9"/>
+      - Visibility=1
+      - RenderTransform:=<TranslateTransform X="4" Y="0" />
       - FontSize=11
-      - FontFamily=vivo Sans EN VF
+      - FontFamily=Segoe UI VF
   - target: TextBlock#InnerTextBlock[Text=]
     styles:
       - Text=
@@ -203,7 +204,7 @@ controlStyles:
       - CornerRadius=$CornerRadius
   - target: WindowsInternal.ComposableShell.Experiences.Switcher.VirtualDesktopBarElement#VirtualDesktopBar
     styles:
-      - //RenderTransform:=<TranslateTransform X="0" Y="60"/>
+      - //RenderTransform:=<TranslateTransform X="0" Y="60" />
       - CornerRadius=$CornerRadius
       - Background:=$Background
   - target: Windows.UI.Xaml.Controls.Border#BackgroundDimmingLayer
@@ -215,7 +216,7 @@ controlStyles:
       - Background:=$Background
       - BorderBrush:=$BorderBrush
       - BorderThickness=$BorderThickness
-      - RenderTransform:=<TranslateTransform X="0" Y="10"/>
+      - RenderTransform:=<TranslateTransform X="0" Y="10" />
       - Margin=0,0,0,-10
       - CornerRadius=$CornerRadius
   - target: Windows.UI.Xaml.Controls.Border#SnapPickerBorder
@@ -232,10 +233,10 @@ controlStyles:
       - Margin=0
   - target: Taskbar.TaskbarExtensionElement
     styles:
-      - RenderTransform:=<TranslateTransform X="0" Y="0"/>
+      - RenderTransform:=<TranslateTransform X="0" Y="0" />
   - target: Taskbar.TaskListButtonPanel#ExperienceToggleButtonRootPanel
     styles:
-      - RenderTransform:=<TranslateTransform X="0" Y="0"/>
+      - RenderTransform:=<TranslateTransform X="0" Y="0" />
       - Padding=1.5,4,1.5,4
   - target: Windows.UI.Xaml.Controls.ToolTip > Windows.UI.Xaml.Controls.ContentPresenter#LayoutRoot
     styles:
@@ -318,7 +319,7 @@ controlStyles:
     styles:
       - CornerRadius:=$CornerRadius
       - BorderBrush:=$BorderBrush
-      - BorderThickness=$BorderThickness
+      - BorderThickness:=$BorderThickness
       - Background:=$Background
       - Margin=0,0,0,0
   - target: WindowsInternal.ComposableShell.Experiences.Switcher.VirtualDesktopElementThemed > Windows.UI.Xaml.Controls.Grid#MainGrid > Windows.UI.Xaml.Controls.Border#BorderHighlight
@@ -359,7 +360,7 @@ controlStyles:
     styles:
       - Background:=$Background
       - BorderBrush:=$BorderBrush
-      - BorderThickness=$BorderThickness
+      - BorderThickness:=$BorderThickness
       - CornerRadius:=10
   - target: Taskbar.TaskbarFrame > Grid#RootGrid > Taskbar.TaskbarBackground > Grid > Rectangle#BackgroundFill
     styles:
@@ -381,6 +382,12 @@ controlStyles:
       - BorderThickness:=$BorderThickness
       - BorderBrush:=$BorderBrush
       - BackgroundSizing=InnerBorderEdge
+themeResourceVariables:
+  - ''
+xamlDiagnosticsHandling: alert
+resourceVariables:
+  - variableKey: ''
+    value: ''
 
 ```
 
@@ -403,7 +410,6 @@ https://github.com/user-attachments/assets/4e61b37f-efa9-460c-858c-0d7f0b29154d
 <img width="1043" height="651" alt="Screenshot 2026-04-30 150622" src="https://github.com/user-attachments/assets/05a923bb-b7a9-4b3f-8739-b7c81d7dfbbf" /><img width="553" height="600" alt="image" src="https://github.com/user-attachments/assets/9e23aeae-22e4-4736-99cd-44c280004d8e" />
 <img width="873" height="307" alt="image" src="https://github.com/user-attachments/assets/b0d3ff24-55cb-4cd0-b151-91cdf72bc46c" />
 <img width="1066" height="553" alt="image" src="https://github.com/user-attachments/assets/d85aa313-ea82-4bf8-849b-cf001370b06d" />
-
 
 ---
 
